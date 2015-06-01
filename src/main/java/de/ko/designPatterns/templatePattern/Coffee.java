@@ -8,4 +8,8 @@ public class Coffee extends CaffeineBeverage{
     void addCondiments() {
         System.out.println("Adding some milk");
     }
+
+    boolean hasSugar() {
+        return false;
+    }
 }

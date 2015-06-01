@@ -6,10 +6,18 @@ public abstract class CaffeineBeverage {
         brew();
         pourInCup();
         addCondiments();
+
+        if(hasSugar()) { // a hook
+            addSugar();
+        }
     }
 
     abstract void brew();
     abstract void addCondiments();
+
+    boolean hasSugar() {
+        return true;
+    }
 
     void boilWater() {
         System.out.println("boiling water");
@@ -17,5 +25,9 @@ public abstract class CaffeineBeverage {
 
     void pourInCup() {
         System.out.println("pouring into a cup");
+    }
+
+    void addSugar() {
+        System.out.println("adding sugar");
     }
 }
